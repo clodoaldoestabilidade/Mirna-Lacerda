@@ -1,0 +1,497 @@
+<!DOCTYPE html>
+<html lang="pt-BR" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acelera Leoas | Desbloqueie sua Potência</title>
+    <meta name="description" content="O método definitivo para a mulher que cansou de ser dominada pelo medo e decidiu assumir o controle total do seu corpo.">
+    
+    <!-- FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Tailwind Configuration -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: {
+                            100: '#FFF9C4',
+                            300: '#FDD835',
+                            400: '#FBC02D',
+                            500: '#F9A825', // Main Gold
+                            600: '#F57F17',
+                            700: '#E65100', // Deep Bronze
+                        },
+                        richBlack: '#0a0a0a',
+                        charcoal: '#1c1c1c',
+                    },
+                    fontFamily: {
+                        sans: ['Lato', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'],
+                    },
+                    backgroundImage: {
+                        'metallic-gradient': 'linear-gradient(135deg, #F9A825 0%, #FFF9C4 50%, #F57F17 100%)',
+                        'dark-gradient': 'linear-gradient(to bottom, #0a0a0a, #1c1c1c)',
+                    },
+                    boxShadow: {
+                        'glow': '0 0 20px rgba(249, 168, 37, 0.3)',
+                    }
+                }
+            }
+        }
+    </script>
+
+    <style>
+        /* Custom Utilities */
+        .text-gradient-gold {
+            background: linear-gradient(to right, #FDD835, #F9A825, #F57F17);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .btn-gold {
+            background: linear-gradient(90deg, #F57F17 0%, #F9A825 50%, #F57F17 100%);
+            background-size: 200% auto;
+            color: #000;
+            transition: 0.5s;
+            box-shadow: 0 4px 15px rgba(249, 168, 37, 0.4);
+            font-weight: bold;
+        }
+
+        .btn-gold:hover {
+            background-position: right center;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(249, 168, 37, 0.6);
+        }
+
+        .section-padding {
+            padding-top: 5rem;
+            padding-bottom: 5rem;
+        }
+
+        /* FAQ Transition */
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.3s ease-out;
+        }
+        .faq-answer.active {
+            max-height: 500px; /* Arbitrary large height */
+        }
+        .faq-icon.rotate {
+            transform: rotate(180deg);
+        }
+    </style>
+</head>
+<body class="font-sans text-gray-800 bg-richBlack overflow-x-hidden antialiased">
+
+    <!-- SEÇÃO 1: HERO (Layout VSL Centralizado) -->
+    <section class="relative min-h-screen flex flex-col justify-center items-center bg-dark-gradient text-white overflow-hidden py-16">
+        <!-- Background Elements -->
+        <div class="absolute inset-0 bg-[url('https://www.transparenttextures.com/patterns/cubes.png')] opacity-10"></div>
+        <div class="absolute top-0 right-0 w-96 h-96 bg-gold-500 rounded-full mix-blend-multiply filter blur-3xl opacity-20 animate-pulse"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="flex flex-col items-center text-center max-w-5xl mx-auto">
+                
+                <!-- Tag -->
+                <div class="inline-block px-4 py-1 border border-gold-400 rounded-full text-gold-300 text-sm tracking-widest uppercase mb-6">
+                    Método Exclusivo
+                </div>
+                
+                <!-- Headline -->
+                <h1 class="font-serif text-3xl md:text-5xl lg:text-6xl font-bold leading-tight mb-6">
+                    Desbloqueie sua <span class="text-gradient-gold">Potência Pélvica</span> e Acelere 12 Meses de Resultados em Apenas 3 Meses.
+                </h1>
+                
+                <!-- Subheadline -->
+                <p class="text-lg lg:text-xl text-gray-300 font-light leading-relaxed mb-10 max-w-3xl mx-auto">
+                    O método definitivo para a mulher que cansou de ser dominada pelo medo e decidiu assumir o controle total do seu corpo, do seu relacionamento e da sua conta bancária.
+                </p>
+
+                <!-- Video (Agora ACIMA do botão e corrigido) -->
+                <div class="w-full max-w-4xl relative p-2 bg-gradient-to-br from-gold-300 to-transparent rounded-2xl shadow-glow mb-10">
+                    <div class="relative w-full pb-[56.25%] rounded-xl overflow-hidden shadow-2xl border-4 border-richBlack bg-black">
+                         <iframe 
+                            class="absolute top-0 left-0 w-full h-full"
+                            src="https://www.youtube.com/embed/6XkRaF7DSnA?rel=0&modestbranding=1&playsinline=1&controls=1" 
+                            title="Acelera Leoas Video"
+                            frameborder="0" 
+                            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+                            referrerpolicy="strict-origin-when-cross-origin"
+                            allowfullscreen>
+                        </iframe>
+                    </div>
+                </div>
+
+                <!-- Botão (Agora ABAIXO do vídeo) -->
+                <div class="pt-2">
+                    <a href="https://form.spotform.com.br/cmehnbw7r1ylcpn01mgau115s" class="btn-gold px-12 py-5 rounded-lg text-lg md:text-xl uppercase tracking-wider inline-flex items-center gap-3 transform hover:scale-105 transition-transform duration-300 shadow-[0_0_30px_rgba(249,168,37,0.5)]">
+                        QUERO ATIVAR MINHA POTÊNCIA AGORA!
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 2: PROBLEMA/DORES -->
+    <section class="section-padding bg-charcoal text-white relative border-t border-gray-800">
+        <div class="container mx-auto px-6">
+            <div class="text-center max-w-4xl mx-auto mb-16">
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6 text-gold-100">
+                    Você sente que nasceu para reinar, mas está apenas sobrevivendo?
+                </h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <!-- Bullet 1 -->
+                <div class="bg-richBlack p-8 rounded-2xl border border-gray-800 hover:border-gold-500 transition-colors duration-300 group">
+                    <div class="w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-500 transition-colors">
+                        <i class="fas fa-hourglass-half text-2xl text-gold-500 group-hover:text-black"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-4">A Prisão da Procrastinação</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Você acorda cheia de planos, mas termina o dia frustrada, paralisada por um medo invisível que te impede de avançar nos negócios, enquanto vê outras mulheres conquistando o que deveria ser seu.
+                    </p>
+                </div>
+
+                <!-- Bullet 2 -->
+                <div class="bg-richBlack p-8 rounded-2xl border border-gray-800 hover:border-gold-500 transition-colors duration-300 group">
+                    <div class="w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-500 transition-colors">
+                        <i class="fas fa-link text-2xl text-gold-500 group-hover:text-black"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-4">O Elo Perdido</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        Você já tentou estratégias de marketing e terapias de casal, mas nada funciona de verdade porque a raiz do problema — sua desconexão pélvica e o bloqueio da sua energia vital — continua sendo ignorada.
+                    </p>
+                </div>
+
+                <!-- Bullet 3 -->
+                <div class="bg-richBlack p-8 rounded-2xl border border-gray-800 hover:border-gold-500 transition-colors duration-300 group">
+                    <div class="w-14 h-14 bg-gray-800 rounded-full flex items-center justify-center mb-6 group-hover:bg-gold-500 transition-colors">
+                        <i class="fas fa-venus text-2xl text-gold-500 group-hover:text-black"></i>
+                    </div>
+                    <h3 class="font-serif text-xl font-bold text-white mb-4">O Ciclo da Frustração</h3>
+                    <p class="text-gray-400 text-sm leading-relaxed">
+                        A dor de se olhar no espelho e sentir seu corpo travado, sua libido baixa e seu relacionamento esfriando, drenando a energia criativa que você precisaria para fazer sua empresa crescer.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 3: APRESENTAÇÃO DA SOLUÇÃO -->
+    <section class="section-padding bg-white text-charcoal">
+        <div class="container mx-auto px-6">
+            <div class="flex flex-col lg:flex-row items-center gap-12">
+                <div class="lg:w-1/2">
+                    <div class="relative group">
+                        <div class="absolute -top-4 -left-4 w-20 h-20 border-t-4 border-l-4 border-gold-500"></div>
+                        <!-- Imagem da Leoa Acelerada -->
+                        <img src="https://images.unsplash.com/photo-1614027164847-1b28cfe1df60?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80" 
+                             alt="Leoa em Potência Máxima - Acelera Leoas" 
+                             class="w-full h-auto rounded-lg shadow-xl object-cover transform group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute -bottom-4 -right-4 w-20 h-20 border-b-4 border-r-4 border-gold-500"></div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2">
+                    <h2 class="font-serif text-4xl font-bold mb-6 text-richBlack">
+                        Apresentando o <span class="text-gold-600">ACELERA LEOAS</span>
+                    </h2>
+                    <p class="text-lg text-gray-600 mb-6 leading-relaxed">
+                        O Acelera Leoas não é apenas um curso, é um <strong>ecossistema de aceleração feminina</strong>. Unimos a ciência da reabilitação pélvica, a inteligência emocional e estratégias de negócios em um único método.
+                    </p>
+                    <p class="text-lg text-gray-600 mb-8 leading-relaxed">
+                        É a chave para destravar a energia que você precisa para parar de procrastinar, eliminar dores físicas e começar a faturar e amar na sua potência máxima.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 4: BENEFÍCIOS -->
+    <section class="section-padding bg-richBlack relative text-white">
+        <!-- Decoration -->
+        <div class="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-gold-500 to-transparent"></div>
+        
+        <div class="container mx-auto px-6">
+            <h2 class="font-serif text-3xl md:text-4xl text-center font-bold mb-16">
+                O que você vai conquistar ao se tornar uma <span class="text-gradient-gold">Leoa</span>
+            </h2>
+
+            <div class="grid md:grid-cols-2 gap-10">
+                <!-- Benefício 1 -->
+                <div class="flex items-start gap-5">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/30">
+                        <i class="fas fa-bolt text-gold-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gold-100 mb-2">Energia Vital Restaurada</h3>
+                        <p class="text-gray-400 text-sm">Elimine problemas pélvicos e dores crônicas para ter disposição física sobrando, transformando seu corpo em uma usina de força para o dia a dia.</p>
+                    </div>
+                </div>
+
+                <!-- Benefício 2 -->
+                <div class="flex items-start gap-5">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/30">
+                        <i class="fas fa-rocket text-gold-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gold-100 mb-2">Aceleração 10x</h3>
+                        <p class="text-gray-400 text-sm">Pare de andar em círculos. Tenha acesso ao mapa exato para comprimir anos de tentativas e erros em resultados financeiros e pessoais rápidos e sólidos.</p>
+                    </div>
+                </div>
+
+                <!-- Benefício 3 -->
+                <div class="flex items-start gap-5">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/30">
+                        <i class="fas fa-heart text-gold-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gold-100 mb-2">Magnetismo Pessoal</h3>
+                        <p class="text-gray-400 text-sm">Resgate sua autoconfiança e poder de sedução, tornando-se uma mulher admirada no relacionamento e uma líder respeitada no seu mercado.</p>
+                    </div>
+                </div>
+
+                <!-- Benefício 4 -->
+                <div class="flex items-start gap-5">
+                    <div class="flex-shrink-0 w-12 h-12 rounded-full bg-gold-500/10 flex items-center justify-center border border-gold-500/30">
+                        <i class="fas fa-brain text-gold-400"></i>
+                    </div>
+                    <div>
+                        <h3 class="font-serif text-xl font-bold text-gold-100 mb-2">Fim da Paralisia</h3>
+                        <p class="text-gray-400 text-sm">Substitua a confusão mental por clareza absoluta. Você saberá exatamente qual o próximo passo dar, sem medo e sem travas.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 5 & 6: OFERTAS -->
+    <section id="oferta" class="section-padding bg-gradient-to-b from-charcoal to-richBlack text-white">
+        <div class="container mx-auto px-6">
+            
+            <!-- OFERTA A -->
+            <div class="max-w-4xl mx-auto bg-gray-900 border border-gold-500/30 rounded-3xl overflow-hidden shadow-glow mb-12">
+                <div class="p-8 md:p-12 text-center">
+                    <h2 class="font-serif text-3xl font-bold mb-2">Aplique para sua Sessão Estratégica</h2>
+                    <p class="text-gray-400 mb-8">O primeiro passo para a sua transformação</p>
+                    
+                    <div class="mb-8">
+                        <p class="text-gray-500 text-lg line-through mb-2">De R$ 10.000,00</p>
+                        <div class="bg-gold-500/10 inline-block px-6 py-2 rounded-lg border border-gold-500/50">
+                            <p class="text-gold-400 font-bold text-xl md:text-2xl">
+                                Por: CONDIÇÃO ESPECIAL REVELADA NA SESSÃO
+                            </p>
+                        </div>
+                    </div>
+
+                    <a href="https://form.spotform.com.br/cmehnbw7r1ylcpn01mgau115s" class="btn-gold w-full md:w-auto px-12 py-4 rounded-lg text-xl uppercase tracking-wider shadow-lg">
+                        AGENDAR MINHA APLICAÇÃO AGORA
+                    </a>
+                </div>
+            </div>
+
+            <!-- OFERTA B (BÔNUS) -->
+            <div class="max-w-5xl mx-auto">
+                <h3 class="text-center font-serif text-2xl text-white mb-8">
+                    Ao ser aprovada, você também garante estes <span class="text-gold-400">Bônus Exclusivos</span>:
+                </h3>
+                
+                <div class="grid md:grid-cols-2 gap-6">
+                    <!-- Bônus 1 -->
+                    <div class="bg-gray-800/50 p-6 rounded-xl border-l-4 border-gold-500">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-gift text-gold-500"></i>
+                            <h4 class="font-bold text-lg text-white">Protocolo Despertar da Leoa</h4>
+                        </div>
+                        <p class="text-gray-400 text-sm">Uma rotina matinal de 15 minutos para ativar sua musculatura pélvica e blindar sua mente contra a preguiça (Valor inestimável).</p>
+                    </div>
+
+                    <!-- Bônus 2 -->
+                    <div class="bg-gray-800/50 p-6 rounded-xl border-l-4 border-gold-500">
+                        <div class="flex items-center gap-3 mb-3">
+                            <i class="fas fa-gift text-gold-500"></i>
+                            <h4 class="font-bold text-lg text-white">Workshop: Negócios de Alta Frequência</h4>
+                        </div>
+                        <p class="text-gray-400 text-sm">Como usar sua nova energia para dobrar seu faturamento sem trabalhar mais horas (Vendido separadamente por R$ 997).</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 7: GARANTIA -->
+    <section class="py-16 bg-white border-y border-gray-200">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="flex flex-col md:flex-row items-center gap-10">
+                <div class="flex-shrink-0 relative group">
+                    <!-- Sophisticated Seal CSS/SVG -->
+                    <div class="w-40 h-40 md:w-48 md:h-48 relative flex items-center justify-center mx-auto md:mx-0">
+                        <svg viewBox="0 0 200 200" class="w-full h-full drop-shadow-2xl">
+                            <defs>
+                                <linearGradient id="gold-grad" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#FFF9C4" />
+                                    <stop offset="50%" style="stop-color:#F9A825" />
+                                    <stop offset="100%" style="stop-color:#F57F17" />
+                                </linearGradient>
+                            </defs>
+                            
+                            <!-- Outer Ring -->
+                            <circle cx="100" cy="100" r="95" fill="url(#gold-grad)" />
+                            <circle cx="100" cy="100" r="90" fill="#0a0a0a" />
+                            
+                            <!-- Middle Ring -->
+                            <circle cx="100" cy="100" r="85" fill="none" stroke="url(#gold-grad)" stroke-width="2" stroke-dasharray="2 2" />
+                            
+                            <!-- Inner Circle Background -->
+                            <circle cx="100" cy="100" r="70" fill="url(#gold-grad)" opacity="0.1" />
+                            
+                            <!-- Text Top -->
+                            <path id="curveTop" d="M 40,100 A 60,60 0 0,1 160,100" fill="none" />
+                            <text font-family="Playfair Display, serif" font-weight="bold" font-size="14" letter-spacing="3" fill="#FDD835">
+                                <textPath href="#curveTop" startOffset="50%" text-anchor="middle">GARANTIA</textPath>
+                            </text>
+                            
+                            <!-- Text Bottom -->
+                            <path id="curveBottom" d="M 40,100 A 60,60 0 0,0 160,100" fill="none" />
+                            <text font-family="Playfair Display, serif" font-weight="bold" font-size="12" letter-spacing="2" fill="#F57F17">
+                                <textPath href="#curveBottom" startOffset="50%" text-anchor="middle">INCONDICIONAL</textPath>
+                            </text>
+                            
+                            <!-- Big Center -->
+                            <text x="100" y="115" text-anchor="middle" fill="white" font-family="Playfair Display, serif" font-weight="bold" font-size="56" style="filter: drop-shadow(0 2px 2px rgba(0,0,0,0.5));">7</text>
+                            <text x="100" y="132" text-anchor="middle" fill="#FFF9C4" font-family="Lato, sans-serif" font-size="10" letter-spacing="3" font-weight="bold">DIAS</text>
+
+                            <!-- Decoration -->
+                            <circle cx="100" cy="100" r="65" fill="none" stroke="#F57F17" stroke-width="0.5" />
+                        </svg>
+                        <!-- Shine Effect -->
+                        <div class="absolute inset-0 rounded-full bg-gradient-to-tr from-transparent via-white to-transparent opacity-20 pointer-events-none"></div>
+                    </div>
+                </div>
+                <div class="text-center md:text-left">
+                    <h2 class="font-serif text-3xl font-bold text-richBlack mb-4">Risco Zero</h2>
+                    <p class="text-gray-600 leading-relaxed">
+                        Eu tiro todo o peso das suas costas. Ao entrar no Acelera Leoas, você tem <strong>7 dias de garantia incondicional</strong>. Se você acessar o método e não sentir que sua visão de mundo e sua energia começaram a mudar, eu devolvo 100% do seu investimento. Sem perguntas, sem letras miúdas. O risco é todo meu.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 8: SOBRE O AUTOR -->
+    <section class="section-padding bg-charcoal text-white">
+        <div class="container mx-auto px-6 max-w-4xl">
+            <div class="w-full text-center">
+                <p class="text-gold-400 font-bold uppercase tracking-widest text-sm mb-4">Mentora & Especialista</p>
+                <h2 class="font-serif text-3xl md:text-4xl font-bold mb-6">Quem é Mirna Lacerda?</h2>
+                <div class="w-24 h-1 bg-gold-500 mx-auto rounded-full mb-8"></div>
+                <p class="text-gray-300 mb-6 leading-relaxed text-lg">
+                    Mirna Lacerda é mentora de mulheres e especialista em desbloqueio de potencial feminino. Com uma abordagem única que conecta saúde íntima e performance nos negócios, ela já guiou centenas de alunas a saírem da estagnação e assumirem o protagonismo de suas vidas.
+                </p>
+                <p class="text-gray-300 leading-relaxed text-lg">
+                    Ela não ensina apenas teoria; ela ensina como despertar a Leoa que existe em você para conquistar tudo o que deseja.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 9: FAQ -->
+    <section class="section-padding bg-richBlack text-white">
+        <div class="container mx-auto px-6 max-w-3xl">
+            <h2 class="font-serif text-3xl font-bold text-center mb-12">Perguntas Frequentes</h2>
+            
+            <div class="space-y-4">
+                <!-- Pergunta 1 -->
+                <div class="border border-gray-800 rounded-lg bg-charcoal overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-gray-800 transition-colors">
+                        <span class="font-bold text-lg">Eu não tenho tempo para fazer mais um curso.</span>
+                        <i class="fas fa-chevron-down faq-icon text-gold-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-900/50 text-gray-400">
+                        <div class="py-5 border-t border-gray-800">
+                            O Acelera Leoas não é sobre te dar "mais coisas para fazer", é sobre te ensinar a fazer as coisas certas. O método foi desenhado para eliminar a procrastinação, ou seja: você vai ganhar tempo ao parar de desperdiçar horas com dúvidas e medos.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pergunta 2 -->
+                <div class="border border-gray-800 rounded-lg bg-charcoal overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-gray-800 transition-colors">
+                        <span class="font-bold text-lg">Para quem é isso exatamente?</span>
+                        <i class="fas fa-chevron-down faq-icon text-gold-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-900/50 text-gray-400">
+                        <div class="py-5 border-t border-gray-800">
+                            Para mulheres ambiciosas que sentem que têm um potencial gigante adormecido, mas estão sofrendo com bloqueios físicos (pélvicos), emocionais (relacionamento) ou financeiros.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Pergunta 3 -->
+                <div class="border border-gray-800 rounded-lg bg-charcoal overflow-hidden">
+                    <button class="faq-toggle w-full px-6 py-5 text-left flex justify-between items-center focus:outline-none hover:bg-gray-800 transition-colors">
+                        <span class="font-bold text-lg">Como recebo o acesso?</span>
+                        <i class="fas fa-chevron-down faq-icon text-gold-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="faq-answer px-6 bg-gray-900/50 text-gray-400">
+                        <div class="py-5 border-t border-gray-800">
+                            Imediatamente após a aprovação da sua aplicação e confirmação da matrícula, você receberá um e-mail com seus dados exclusivos de acesso à nossa área de membros.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- SEÇÃO 10: FOOTER -->
+    <footer class="py-8 bg-black text-center text-gray-600 border-t border-gray-900">
+        <div class="container mx-auto px-6">
+            <p class="text-sm">
+                &copy; 2025 - ACELERA LEOAS - Todos os direitos reservados.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script>
+        // FAQ Toggle Logic
+        document.querySelectorAll('.faq-toggle').forEach(button => {
+            button.addEventListener('click', () => {
+                const answer = button.nextElementSibling;
+                const icon = button.querySelector('.faq-icon');
+                
+                // Toggle current
+                answer.classList.toggle('active');
+                icon.classList.toggle('rotate');
+                
+                // Close others (optional accordion behavior)
+                document.querySelectorAll('.faq-answer').forEach(otherAnswer => {
+                    if (otherAnswer !== answer) {
+                        otherAnswer.classList.remove('active');
+                    }
+                });
+                document.querySelectorAll('.faq-icon').forEach(otherIcon => {
+                    if (otherIcon !== icon) {
+                        otherIcon.classList.remove('rotate');
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html>
