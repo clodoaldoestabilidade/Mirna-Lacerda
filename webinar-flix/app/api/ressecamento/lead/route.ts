@@ -84,6 +84,15 @@ export async function POST(req: NextRequest) {
       oQueTentou ? `O que tentou: ${oQueTentou}` : null,
     ].filter(Boolean).join("\n");
 
+    const problemLabels: Record<string, string> = {
+      incontinencia: "Incontinência Urinária",
+      ressecamento: "Ressecamento Íntimo",
+      desejo: "Falta de Desejo",
+      relacionamento: "Problema no Relacionamento",
+      outro: "Outro",
+    };
+    const problemaLabel = problemLabels[problema] ?? problema;
+
     const ingestUrl = process.env.MEGACRM_INGEST_URL;
     if (ingestUrl) {
       await fetch(ingestUrl, {
@@ -96,8 +105,19 @@ export async function POST(req: NextRequest) {
           pipeline_id: PIPELINE_ID,
           stage_id: STAGE_ID,
           deal_note: dealNote,
-          tags: ["quiz:ressecamento"],
-          source_label: `Quiz Ressecamento — ${problema}`,
+          notes: dealNote,
+          description: dealNote,
+          tags: [
+            "quiz:ressecamento",
+            `problema:${problema}`,
+            tentou === "sim" ? "ja-tentou-resolver" : "nunca-tentou",
+          ],
+          custom_fields: {
+            problema: problemaLabel,
+            ja_tentou_resolver: tentou === "sim" ? "Sim" : "Não",
+            o_que_tentou: oQueTentou || "",
+          },
+          source_label: `Quiz Ressecamento — ${problemaLabel}`,
           page_url: "https://webinar.acesso.vip/ressecamento",
         }),
       });
