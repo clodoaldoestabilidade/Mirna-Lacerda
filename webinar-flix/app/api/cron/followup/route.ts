@@ -49,7 +49,37 @@ export async function GET(req: NextRequest) {
 
   let processed = 0;
 
+  const phones = rows.map((r) => `"${r.phone}"`).join(",");
+  const optoutRes = await fetch(
+    `${supabaseUrl}/rest/v1/optout_list?phone=in.(${phones})&select=phone`,
+    {
+      headers: {
+        apikey: supabaseKey,
+        Authorization: `Bearer ${supabaseKey}`,
+      },
+    }
+  );
+  const optedOut = new Set(
+    optoutRes.ok
+      ? ((await optoutRes.json()) as { phone: string }[]).map((r) => r.phone)
+      : []
+  );
+
   for (const row of rows) {
+    if (optedOut.has(row.phone)) {
+      await fetch(`${supabaseUrl}/rest/v1/followup_queue?id=eq.${row.id}`, {
+        method: "PATCH",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: supabaseKey,
+          Authorization: `Bearer ${supabaseKey}`,
+          Prefer: "return=minimal",
+        },
+        body: JSON.stringify({ sent: true, sent_at: new Date().toISOString() }),
+      });
+      continue;
+    }
+
     try {
       const sendRes = await fetch(edgeFnUrl, {
         method: "POST",
