@@ -189,7 +189,7 @@ function VendasContent() {
           <div>
             <div className="hero-photo-frame">
               <div className="hero-photo-ring" />
-              <img src="https://cdn.kairogen.ai/gallery/images/6a89c1fac177e076501baa68/8e5e2e46-5878-4d76-8373-2bb74a3c2c76.png" alt="Mirna Lacerda" width={480} height={600} />
+              <img src="/images/mirna-hero.jpg" alt="Mirna Lacerda" width={480} height={600} />
             </div>
           </div>
         </div>
@@ -239,7 +239,7 @@ function VendasContent() {
         <div className="wrap">
           <span className="eyebrow reveal">Quem sou eu</span>
           <div className="about-grid reveal">
-            <div className="about-photo"><img src="https://cdn.kairogen.ai/gallery/images/6a89c1fac177e076501baa68/2f1fd629-f336-4b84-81c1-156c45dfed8c.png" alt="Mirna Lacerda" width={200} height={200} /></div>
+            <div className="about-photo"><img src="/images/mirna-about.jpg" alt="Mirna Lacerda" width={200} height={200} /></div>
             <div>
               <h2>Mirna Lacerda</h2>
               <p className="bio">Sou especialista em bem-estar íntimo e sexualidade feminina. Já conduzi centenas de mulheres em aulas sobre lubrificação, prazer e autoestima — sempre com um olhar acolhedor, direto e sem julgamento. E agora quero te guiar pessoalmente nesse caminho.</p>
