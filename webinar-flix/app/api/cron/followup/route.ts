@@ -18,8 +18,10 @@ export async function GET(req: NextRequest) {
 
   const supabaseUrl = process.env.SUPABASE_URL;
   const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
-  const edgeFnUrl = process.env.SEND_FOLLOWUP_URL;
+  const edgeFnUrl = process.env.SEND_QUIZ_LEAD_URL;
   const notifyToken = process.env.WEBINAR_NOTIFY_SECRET;
+  const workshopData = process.env.WORKSHOP_DATA ?? "em breve";
+  const workshopHora = process.env.WORKSHOP_HORA ?? "20h";
 
   if (!supabaseUrl || !supabaseKey || !edgeFnUrl || !notifyToken) {
     return NextResponse.json({ error: "Missing env vars" }, { status: 500 });
@@ -58,6 +60,9 @@ export async function GET(req: NextRequest) {
         body: JSON.stringify({
           phone: row.phone,
           name: row.name,
+          workshopData,
+          workshopHora,
+          type: "followup",
           problema: row.problema,
         }),
       });
