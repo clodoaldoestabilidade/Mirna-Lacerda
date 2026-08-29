@@ -6,12 +6,6 @@ import { useSearchParams } from "next/navigation";
 const CHECKOUT_URL = "https://chk.eduzz.com/8WPND4ON0P";
 const EVENT_DATETIME = "2026-08-31T20:00:00-03:00";
 
-function trackCheckout() {
-  if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
-    (window as any).fbq("track", "InitiateCheckout", { value: 47, currency: "BRL" });
-  }
-}
-
 function VendasContent() {
   const searchParams = useSearchParams();
   const nome = searchParams.get("nome") ?? "";
@@ -41,6 +35,12 @@ function VendasContent() {
     return () => {
       if (countdownRef.current) clearInterval(countdownRef.current);
     };
+  }, []);
+
+  useEffect(() => {
+    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+      (window as any).fbq("trackCustom", "LeadConfirmado");
+    }
   }, []);
 
   useEffect(() => {
@@ -491,7 +491,7 @@ function VendasContent() {
               <a
                 href={CHECKOUT_URL}
                 className="cta-btn"
-                onClick={trackCheckout}
+
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -712,7 +712,7 @@ function VendasContent() {
               <a
                 href={CHECKOUT_URL}
                 className="cta-btn"
-                onClick={trackCheckout}
+
                 target="_blank"
                 rel="noopener noreferrer"
               >
