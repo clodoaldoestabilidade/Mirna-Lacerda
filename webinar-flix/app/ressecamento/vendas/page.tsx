@@ -503,7 +503,7 @@ function VendasContent() {
             <div className="hero-photo-frame">
               <div className="hero-photo-ring" />
               <img
-                src="/images/mirna-hero.jpg"
+                src="https://cdn.kairogen.ai/gallery/images/6a89c1fac177e076501baa68/8e5e2e46-5878-4d76-8373-2bb74a3c2c76.png"
                 alt="Mirna Lacerda"
                 width={480}
                 height={600}
@@ -642,7 +642,7 @@ function VendasContent() {
           <div className="about-grid reveal">
             <div className="about-photo">
               <img
-                src="/images/mirna-about.jpg"
+                src="https://cdn.kairogen.ai/gallery/images/6a89c1fac177e076501baa68/2f1fd629-f336-4b84-81c1-156c45dfed8c.png"
                 alt="Mirna Lacerda"
                 width={200}
                 height={200}
