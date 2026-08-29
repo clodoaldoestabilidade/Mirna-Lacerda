@@ -49,6 +49,9 @@ export default function RessecamentoQuiz() {
     } catch {
       // falha silenciosa — redirecionar mesmo assim
     }
+    if (typeof window !== "undefined" && typeof (window as any).fbq === "function") {
+      (window as any).fbq("track", "Lead", { content_name: problema });
+    }
     const primeiroNome = nome.trim().split(" ")[0];
     router.push(`/ressecamento/vendas?nome=${encodeURIComponent(primeiroNome)}`);
   }
