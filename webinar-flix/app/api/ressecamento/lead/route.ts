@@ -125,6 +125,27 @@ export async function POST(req: NextRequest) {
 
     await sendQuizWhatsApp(whatsapp as string, primeiroNome);
 
+    const supabaseUrl = process.env.SUPABASE_URL;
+    const supabaseKey = process.env.SUPABASE_SERVICE_ROLE_KEY;
+    if (supabaseUrl && supabaseKey) {
+      const sendAt = new Date(Date.now() + 3 * 60 * 1000).toISOString();
+      await fetch(`${supabaseUrl}/rest/v1/followup_queue`, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          apikey: supabaseKey,
+          Authorization: `Bearer ${supabaseKey}`,
+          Prefer: "return=minimal",
+        },
+        body: JSON.stringify({
+          phone: (whatsapp as string).replace(/\D/g, "").replace(/^0+/, ""),
+          name: primeiroNome,
+          problema: problemaLabel,
+          send_at: sendAt,
+        }),
+      });
+    }
+
     await sendMetaCAPI(
       email as string,
       whatsapp as string,
