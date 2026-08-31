@@ -1,0 +1,10 @@
+{
+  "mcpServers": {
+    "spotform": {
+      "url": "https://api.spotform.com.br/mcp",
+      "headers": {
+        "Authorization": "Bearer spf_mcp_XhBBCnv9ewp2p14rCDcJ6HiWUVPu5oBHV1u4sIXerDI"
+      }
+    }
+  }
+}
